@@ -15,4 +15,8 @@ class Project extends Model
           'date',
           'cover_img'
     ];
+
+    public function type(){
+        return $this->belongsTo(Project::class);
+    }
 }
