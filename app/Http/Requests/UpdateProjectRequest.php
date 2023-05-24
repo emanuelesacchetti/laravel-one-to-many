@@ -27,7 +27,9 @@ class UpdateProjectRequest extends FormRequest
             'title' => 'required|max:150|unique:projects',
             'content' => 'nullable|max:300',
             'date' => 'nullable|date',
-            'cover_img' => 'min:10|max:255|url'
+            'cover_img' => 'min:10|max:255|url',
+            'type_id' => 'nullable|exists:types, id',
+
         ];
     }
 

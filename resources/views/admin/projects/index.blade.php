@@ -12,6 +12,7 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Title</th>
+                        <th scope="col">Tipologia</th>
                         <th scope="col">Cover_img</th>
                         <th scope="col">Date</th>
                         <th scope="col">Slug</th>
@@ -24,6 +25,7 @@
                     <tr>
                         <th scope="row">{{ $project->id }}</th>
                         <td>{{ $project->title }}</td>
+                        <td>{{ $project->type?$project->type->name:'Nessuna tipologia' }}</td>
                         <td>{{ $project->cover_img }}</td>
                         <td>{{ $project->date }}</td>
                         <td>{{ $project->slug }}</td>
