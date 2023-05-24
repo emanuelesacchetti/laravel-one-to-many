@@ -25,7 +25,7 @@
                     <tr>
                         <th scope="row">{{ $project->id }}</th>
                         <td>{{ $project->title }}</td>
-                        <td>{{ $project->type?$project->type->name:'Nessuna tipologia' }}</td>
+                        <td>{{ $project->type?->name }}</td>
                         <td>{{ $project->cover_img }}</td>
                         <td>{{ $project->date }}</td>
                         <td>{{ $project->slug }}</td>

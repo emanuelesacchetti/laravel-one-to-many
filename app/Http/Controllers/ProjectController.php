@@ -44,6 +44,7 @@ class ProjectController extends Controller
         $form_data = $request->validated();  //validated : restituisce un array associativo
         $form_data['slug'] = Str::slug($form_data['title'], '-');
         //$newProject = new Project();
+        
         $newProject = Project::create($form_data);  //la create 1_stanzia il nuovo oggetto,2_fà sia la fill che 3_la save
         //$newProject->fill($form_data);
         //$newProject->save();
@@ -82,6 +83,7 @@ class ProjectController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
+        
         $form_data = $request->validated();
         $form_data['slug'] = Str::slug($request->title, '-');
         $project->update($form_data);
